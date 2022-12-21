@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css\css-reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Merriweather:wght@300;400;700&family=Smythe&display=swap" rel="stylesheet">
+    <title>Restaurant Ordering App</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+
+<body>
+    <div id="overlay" class="overlay hidden"></div>
+    
+    <main>
+      <div class="hero">
+        <div class="hero-text">                 
+            <h1>Jimmy's Diner</h1>
+            <h3>Best burgers and pizzas in town</h3>
+        </div>
+      </div>
+
+      <div id="menu" class="menu"></div>
+
+
+        <!--Order Summary-->
+        <div id="order-summary" class="hidden order-text">
+            <h2 class="order-title">Your order</h2>
+            <hr>
+           
+            <ul id="order-details">
+             <!--ORDER GO HERE-->
+                
+            </ul>
+            <div id="total-box">
+                <h2 class="total-label">Total Price</h2>
+                <p id="total" class="price">NEEDS SUM</p>
+            </div>
+            <button id="reset">Cancel Order</button>
+            <button id="complete-order-btn" class="payment-btn">Complete Order</button>
+        </div>
+
+   <div id="payment-module" class="hidden" >
+
+    <div class="payment-content">
+        <p class="payment-title">Enter card details</p>
+
+        <input required="required" id="firstName" 
+            type="text" 
+            name="firstName"
+            placeholder="enter first name" 
+            aria-label="enter first name">
+
+        <input type="text" 
+            placeholder="enter credit card number"
+            pattern="[0-9]{13}"
+            maxlength="16"
+            aria-label="enter credit or debit card number">
+
+        <input type="number" 
+            maxlength="3"
+            placeholder="enter CVV" 
+            aria-label="enter CVV number" 
+            required>
+
+        <button id="pay-btn" type="submit" class="pay-btn" aria-label="purchase order">Pay</button>
+   </div>
+</div>
+    <div id="end-transaction"></div>
+</main>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>
