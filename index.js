@@ -101,12 +101,12 @@ function deleteItems(element) {
        
     function decrementPriceTotal(listId) {
       menuArray.forEach(function(item) {
-      if(listId === item.uuid) {
-        if(sum > 0) {sum = sum - item.price
-           }
-           document.getElementById('total').textContent = sum
-          } return sum})
-        }
+        if(sum > 0 && listId === item.uuid) {
+        sum = sum - item.price 
+        document.getElementById('total').textContent = sum
+      }
+          else return sum }
+      )}
        
 
 //Resets Order form if all items are removed
