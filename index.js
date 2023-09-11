@@ -101,9 +101,10 @@ function deleteItems(element) {
        
     function decrementPriceTotal(listId) {
       menuArray.forEach(function(item) {
+        let newPrice;
         if(sum > 0 && listId === item.uuid) {
-        sum = sum - item.price 
-        document.getElementById('total').textContent = sum
+          newPrice = sum - item.price 
+        document.getElementById('total').textContent = newPrice
       }
           else return sum }
       )}
